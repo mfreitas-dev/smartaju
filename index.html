@@ -484,6 +484,71 @@ h1,h2,h3,h4,p,blockquote,small,strong,em,
   background:transparent !important;
   background-image:none !important;
 }
+/* ==========================================================
+   RESPONSIVO / MOBILE — corrige conteúdo saindo da tela
+   ========================================================== */
+
+/* Tablets: hero empilha em 1 coluna */
+@media(max-width:960px){
+  .hero{padding-top:140px}
+  .hero-grid{grid-template-columns:1fr;gap:44px;text-align:center}
+  .hero-grid>div{min-width:0}
+  .hero .sub{margin-left:auto;margin-right:auto}
+  .hero-ctas{justify-content:center}
+  .cta-note{justify-content:center}
+  .hero-chips{justify-content:center}
+  .why-grid{gap:36px}
+}
+
+/* Celulares */
+@media(max-width:720px){
+  section{padding:64px 0}
+  .container{width:90%}
+  .hero h1{font-size:clamp(1.75rem,8vw,2.4rem)}
+  .btn{justify-content:center}
+  .hero-ctas{flex-direction:column;align-items:stretch;gap:12px}
+  .hero-ctas .btn{width:100%}
+  .sec-head{margin-bottom:36px}
+  .svc-card,.rev-card{padding:22px}
+  .trust-item{flex-direction:column;text-align:center;gap:8px}
+  .faq-q{font-size:.95rem;padding:16px 18px}
+  .faq-a p{padding:0 18px 16px;font-size:.9rem}
+  .ci-item{padding:16px}
+  .cta-panel{padding:52px 22px;border-radius:22px}
+  .rev-ctas{flex-direction:column;align-items:stretch}
+  .rev-ctas .btn{width:100%}
+  .steps-cta .btn{width:100%;max-width:340px}
+  .foot-bottom{flex-direction:column;text-align:center;align-items:center}
+}
+
+/* Telas menores: mockup e chips nunca saem da tela */
+@media(max-width:560px){
+  .phone{width:min(300px,100%);border-radius:36px}
+  .screen{height:520px}
+  .float-chip{padding:9px 12px;font-size:.74rem}
+  .float-chip .ic{width:16px;height:16px}
+  .fc1{right:0}
+  .fc2{left:0;bottom:140px}
+  .msg{font-size:.74rem;max-width:88%}
+  .chat-body{padding:11px}
+  .rev-score{font-size:2.8rem}
+  .brand-name{font-size:1.1rem}
+  .nav-cta{padding:9px 12px;font-size:.8rem}
+  .badge{font-size:.74rem;padding:6px 12px}
+}
+
+/* Ultra estreitos (320px) */
+@media(max-width:360px){
+  .trust-grid{grid-template-columns:1fr}
+  .phone{width:100%}
+  .screen{height:480px}
+}
+
+/* Segurança extra contra rolagem horizontal */
+html,body{overflow-x:clip}
+.phone-wrap{max-width:100%}
+.svc-grid,.rev-grid,.why-list,.steps,.trust-grid,.contact-grid,.foot-grid{min-width:0}
+.svc-card,.rev-card,.step,.why-item,.trust-item,.ci-item,.msg,blockquote{overflow-wrap:break-word}
 </style>
 </head>
 <body>
